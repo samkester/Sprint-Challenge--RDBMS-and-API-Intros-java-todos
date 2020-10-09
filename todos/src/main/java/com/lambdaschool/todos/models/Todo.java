@@ -33,8 +33,6 @@ public class Todo extends Auditable {
     public Todo(User user, String description) {
         this.description = description;
         this.user = user;
-
-        System.out.println("New todo, user: " + getUser());
     }
 
     public long getTodoid() {
