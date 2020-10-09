@@ -50,7 +50,7 @@ public class User extends Auditable
      * List of todos associated with the user
      */
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
-    @JsonIgnoreProperties(value = "user")
+    @JsonIgnoreProperties(value = "user", allowSetters = true)
     private Set<Todo> todos = new HashSet<>();
 
     /**
